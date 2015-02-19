@@ -6,25 +6,22 @@ import java.io.*;
 
 public class Terminateur implements Runnable
 {
-	private static final String FIN = "Q";
-	boolean Condition = true;
 	
+        BufferedReader reader = new BufferedReader(new InputStreamReader( System.in ) );
+	String Clef;
+
 	public void run()
 	{
 		String Key = null;
 		try
 		{
-			while(Condition)
+			while(!Clef.toUpperCase().equals("Q"))
 			{
-				BufferedReader reader = new BufferedReader(new InputStreamReader( System.in ) );
+				
 				Key = reader.readLine();
 
-				String Clef = Key.trim();
-				
-            if(Key.toUpperCase().trim() == FIN)
-				{
-					Condition = false;
-				}
+				Clef = Key.trim();				
+                                
 			}
 		}
 		catch(IOException e)
