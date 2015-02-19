@@ -20,18 +20,8 @@ public class Terminateur implements Runnable
 				
 				Key = reader.readLine();
 
-<<<<<<< HEAD
 				Clef = Key.trim();				
                                 
-=======
-				String Clef = Key.trim();
-			///////////////////////////////////////////////////////////////////////	
-            if(Key.toUpperCase().trim() == FIN)			// Why this no work
-				{										// Why this no work
-					Condition = false;					// Why this no work
-				}										// Why this no work
-			////////////////////////////////////////////////////////////////////////
->>>>>>> origin/master
 			}
 		}
 		catch(IOException e)
