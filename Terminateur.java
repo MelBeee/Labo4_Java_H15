@@ -6,22 +6,19 @@ import java.io.*;
 
 public class Terminateur implements Runnable
 {
-	
-        BufferedReader reader = new BufferedReader(new InputStreamReader( System.in ) );
-	String Clef;
-
 	public void run()
 	{
-		String Key = null;
 		try
 		{
-			while(!Clef.toUpperCase().equals("Q"))
+			// variable qui va contenir le readline
+			String keyPress = new String();
+			// buffer pour lire l'entrée au clavier
+			BufferedReader reader = new BufferedReader(new InputStreamReader( System.in ) );
+		
+			// on lit se qui est entré au clavier tant que l'utilisateur n'entre pas Q ou q
+			while(!keyPress.toLowerCase().equals("q"))
 			{
-				
-				Key = reader.readLine();
-
-				Clef = Key.trim();				
-                                
+				keyPress = reader.readLine(); 
 			}
 		}
 		catch(IOException e)
